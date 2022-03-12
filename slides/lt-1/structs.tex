@@ -1,0 +1,77 @@
+\section{Handling structs}
+
+\begin{frame}
+  \frametitle{Handling \texttt{struct}s}
+  \framesubtitle{What a is a \texttt{struct} in Go}
+
+  \begin{block}{A basic \texttt{struct} in Go}
+    \centering
+    \inputminted[
+      firstline=3,
+      lastline=5,
+      fontsize=\scriptsize,
+      framesep=4mm]
+    {go}{go/struct.go}
+    \uncover<2->{\inputminted[
+      firstline=8,
+      lastline=8,
+      tabsize=0,
+      fontsize=\scriptsize,
+      framesep=4mm
+    ]{go}{go/struct.go}}
+    \uncover<3->{\inputminted[
+      firstline=9,
+      lastline=9,
+      tabsize=0,
+      fontsize=\scriptsize,
+      framesep=4mm
+    ]{go}{go/struct.go}}
+    \uncover<4->{\inputminted[
+      firstline=10,
+      lastline=10,
+      tabsize=0,
+      fontsize=\scriptsize,
+      framesep=4mm
+    ]{go}{go/struct.go}}
+  \end{block}
+
+  \begin{center}
+    \uncover<5->{\textbf{First goal:} Handling basic \texttt{struct}.}\\
+    \uncover<5->{\texttt{struct} introduces a large panel of features to manage.}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Handling \texttt{struct}s}
+  \framesubtitle{How to represent a \texttt{struct} in \gotopins}
+  \begin{itemize}
+    \item Detect \texttt{struct}s' declaration
+    \item Transform \texttt{struct}s' declaration
+      \begin{itemize}
+        \item Instantiate a \texttt{struct} counter
+        \item Convert \texttt{struct} into a number (for further manipulations)
+      \end{itemize}
+    \item Transform \texttt{struct} variables into an array
+  \end{itemize}
+
+  \begin{block}{Transforming a \texttt{struct}}
+    \begin{columns}
+      \begin{column}{0.49\textwidth}
+        \centering
+        \inputminted[
+          firstline=3,
+          fontsize=\scriptsize,
+          framesep=4mm]
+        {go}{go/structs.go}
+      \end{column}
+      \begin{column}{0.49\textwidth}
+        \centering
+        \uncover<2->{\inputminted[
+          firstline=3,
+          fontsize=\scriptsize,
+          framesep=4mm]
+        {go}{go/structs-go2pins.go}}
+      \end{column}
+    \end{columns}
+  \end{block}
+\end{frame}
